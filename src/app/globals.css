@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #E0E1DD;
+  --foreground: #415A77;
+  --dark-accent: #B2BCC2;
+  --accent-1: #748CAB;
+  --accent-2: #3E5C76;
+  --accent-3: #1D2D44;
+  --light-accent: #152033;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0D1321;
+    --foreground: #F0EBD8;
+    --dark-accent: #152033;
+    --accent-1: #1D2D44;
+    --accent-2: #3E5C76;
+    --accent-3: #748CAB;
+    --light-accent: #B2BCC2;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
