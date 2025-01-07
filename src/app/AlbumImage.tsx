@@ -4,7 +4,12 @@ import Image from 'next/image';
 
 function AlbumImage({ imageName, altText }: { imageName: string, altText: string }) {
     return (
-        <div className="group/album-tiles flex items-center justify-center relative select-none">
+        <div
+            className="group/album-tiles flex
+            items-center justify-center relative select-none
+            sm:w-36 md:w-52 lg:w-60 xl:w-80
+            duration-300 transition-all"
+        >
             <div
                 className="rounded-2xl bg-accent-2 scale-100
                     group-hover/album-tiles:brightness-150 group-hover/album-tiles:scale-105

@@ -1,10 +1,20 @@
 import Image from 'next/image';
 import Link from "next/link";
 
-function AlbumTile({ id, imageName, altText, size }: { key: number, id: number, imageName: string, altText: string, size: number}) {
+function AlbumTile(
+    { id, imageName, altText, size }
+    :
+    { key: number, id: number, imageName: string, altText: string, size: number}
+    )
+{
     return (
         <Link className="active:scale-[80%] duration-200 transition-all" href={"/album/" + id} draggable={false}>
-            <div className="group/album-tiles flex items-center justify-center relative select-none">
+            <div
+                className="group/album-tiles flex
+                items-center justify-center relative select-none
+                sm:w-36 md:w-52 lg:w-60 xl:w-80
+                duration-300 transition-all"
+            >
                 <div
                     className="
                     flex flex-grow items-center justify-center

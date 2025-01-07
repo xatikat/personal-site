@@ -6,13 +6,6 @@ export const albumsData = [
         "cover_file": "hsf_bk.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec dolor vitae augue iaculis lobortis. Integer ac augue eu nunc accumsan finibus. Donec nec posuere velit. Phasellus faucibus fermentum lacus, ac vulputate enim dictum molestie. Sed eros nibh, mattis sed cursus eget, pulvinar vitae nisi. Nam urna est, dictum eu nisi id, efficitur fringilla eros. Ut cursus placerat purus ut posuere. Proin ac pellentesque sapien. Praesent interdum lacus tortor. Vestibulum sed ultricies ex. Nunc arcu dolor, feugiat quis nibh et, congue maximus eros. Cras a odio enim. Maecenas accumsan non orci at ultrices.",
         "spotify_url": "",
-        "color_palette": {
-            "bg": "#272D34",
-            "a1": "#363B3F",
-            "a2": "#0E2458",
-            "a3": "#1D3F7D",
-            "fg": "#97907F",
-        }
     },
     {
         "id": 1,
@@ -29,13 +22,6 @@ export const albumsData = [
         "cover_file": "ep_ji.jpg",
         "description": "",
         "spotify_url": "",
-        "color_palette": {
-            "bg": "#EB0F29",
-            "a1": "#16171B",
-            "a2": "#077287",
-            "a3": "#3B8C91",
-            "fg": "#C3D3CC",
-        }
     },
     {
         "id": 3,
