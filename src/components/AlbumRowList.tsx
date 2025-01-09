@@ -10,6 +10,7 @@ import "swiper/css/effect-coverflow";
 // TODO: add row component
 
 export default function AlbumRowList() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const listAlbums = albumsData.map((album) => (
     <AlbumRow
       key={album.id}

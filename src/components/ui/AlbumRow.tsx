@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
-import { motion } from "motion/react";
+import React from "react";
 
 export default function AlbumRow({
   id,
@@ -25,7 +24,7 @@ export default function AlbumRow({
     >
       <div className="hover: flex flex-col items-center gap-10 overflow-hidden rounded-3xl border-10 border-accent-2 bg-accent-1 p-10 transition-all duration-300 sm:flex-col md:flex-row">
         <Image
-          className={"scale-100 rounded-xl"}
+          className="scale-100 rounded-xl"
           src={"/" + imageName}
           alt={title + " by " + artist}
           height={imageSize}
