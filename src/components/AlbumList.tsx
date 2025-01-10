@@ -17,17 +17,19 @@ export default function AlbumList() {
 
   return (
     <div
-      className={"flex flex-col items-center justify-center overflow-scroll"}
+      className={
+        "flex h-screen flex-col items-center justify-center overflow-y-auto"
+      }
     >
       <Button
         variant="default"
-        className="absolute right-0 top-0 z-50 m-10 size-10 bg-dark-accent transition-all duration-100 active:scale-90"
+        className="fixed right-0 top-0 z-50 m-10 size-10 bg-dark-accent transition-all duration-100 active:scale-90"
         onClick={onGridToggle}
       >
         {isGrid ? <Rows3 size={20} /> : <Grid3x3 size={20} />}
       </Button>
       {isGrid ? (
-        <div className="m-16 w-[42vw] items-center justify-center">
+        <div className="m-16 w-[42vw]">
           <AlbumGrid />
         </div>
       ) : (
