@@ -1,13 +1,12 @@
 import { albumsData } from "@/components/AlbumData";
 import AlbumRow from "@/components/ui/AlbumRow";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, EffectCoverflow } from "swiper/modules";
+import { Mousewheel, EffectCoverflow, Keyboard } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/effect-coverflow";
-
-// TODO: add row component
+import "swiper/css/keyboard";
 
 export default function AlbumRowList() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -23,20 +22,27 @@ export default function AlbumRowList() {
   ));
   return albumsData ? (
     <Swiper
-      className="absolute top-0 h-[100vh] w-[48vw] select-none overflow-visible"
-      modules={[Mousewheel, EffectCoverflow]}
+      className="absolute top-0 mx-auto h-screen w-screen select-none overflow-visible"
+      modules={[Mousewheel, EffectCoverflow, Keyboard]}
       direction={"vertical"}
       effect={"coverflow"}
       spaceBetween={-100}
-      slidesPerView={3}
-      coverflowEffect={{ scale: 0.5 }}
+      slidesPerView={5}
+      coverflowEffect={{
+        scale: 0.8,
+        depth: 600,
+        modifier: 0.4,
+        slideShadows: false,
+        stretch: -500,
+      }}
+      keyboard={{ enabled: true }}
       loop={true}
       mousewheel={true}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
       {albumsData.map((album) => (
-        <SwiperSlide key={album.id}>
+        <SwiperSlide className="px-[20vw]" key={album.id}>
           <AlbumRow
             key={album.id}
             id={album.id}

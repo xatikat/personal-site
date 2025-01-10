@@ -10,7 +10,7 @@ import AlbumList from "@/components/AlbumList";
 export default function Home() {
   return (
     <div>
-      <div className="grid items-center justify-center font-[family-name:var(--font-geist-sans)]">
+      <div className="grid items-center justify-center overflow-visible font-[family-name:var(--font-geist-sans)]">
         <main>
           <AlbumList />
         </main>
