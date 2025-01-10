@@ -80,4 +80,28 @@ export const albumsData = [
     description: "",
     spotify_url: "",
   },
+  {
+    id: 9,
+    name: "Placeholder",
+    artist: "Placeholder",
+    cover_file: "ph.jpg",
+    description: "",
+    spotify_url: "",
+  },
+  {
+    id: 9,
+    name: "Placeholder",
+    artist: "Placeholder",
+    cover_file: "ph.jpg",
+    description: "",
+    spotify_url: "",
+  },
+  {
+    id: 9,
+    name: "Placeholder",
+    artist: "Placeholder",
+    cover_file: "ph.jpg",
+    description: "",
+    spotify_url: "",
+  },
 ];

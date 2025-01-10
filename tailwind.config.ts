@@ -1,6 +1,4 @@
 import type { Config } from "tailwindcss";
-import daisyui from "daisyui";
-import plugin from "tailwindcss/plugin";
 
 export default {
   darkMode: ["class"],
@@ -11,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        geist: ["var(--font-geist-sans)"],
+        geistMono: ["var(--font-geist-mono)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -21,10 +23,6 @@ export default {
         "light-accent": "var(--light-accent)",
       },
       spacing: {},
-      backgroundImage: {
-        "row-gradient-unhover":
-          "radial-gradient(circle, rgba(34,53,80,1) 0%, rgba(29,45,68,1) 100%)",
-      },
       borderWidth: {
         "4": "4px",
         "8": "8px",
@@ -32,22 +30,5 @@ export default {
       },
     },
   },
-  plugins: [
-    daisyui,
-    require("tailwindcss-animate"),
-    plugin(
-      function ({ addVariant }) {
-        addVariant("glow", ".glow-capture .glow-overlay &");
-      },
-      {
-        theme: {
-          extend: {
-            colors: {
-              glow: "color-mix(in srgb, var(--glow-color) calc(<alpha-value> * 100%), transparent)",
-            },
-          },
-        },
-      },
-    ),
-  ],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
