@@ -10,9 +10,7 @@ import AlbumList from "@/components/AlbumList";
 export default function Home() {
   return (
     <div>
-      <main>
-        <AlbumList />
-      </main>
+      <AlbumList />
     </div>
   );
 }
