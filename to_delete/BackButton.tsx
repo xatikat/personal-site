@@ -6,7 +6,7 @@ export default function BackButton() {
   return (
     <Link
       className="transition-all duration-200 active:scale-[80%]"
-      href={"/"}
+      href={"/public"}
       draggable={false}
     >
       <div className="group/backbtn">

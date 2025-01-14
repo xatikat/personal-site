@@ -1,8 +1,8 @@
 import { albumsData } from "@/components/AlbumData";
 import { notFound } from "next/navigation";
-import BackButton from "@/app/BackButton";
 import AlbumImage from "@/components/ui/AlbumImage";
 import Image from "next/image";
+import { BackButton } from "@/components/BackButton";
 
 function getAlbum(id: string | string[] | undefined) {
   if (typeof id === "string") {
@@ -36,6 +36,7 @@ export default async function Page({
         alt={""}
         draggable={false}
       />
+      <BackButton />
       <div
         className={`grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20`}
       >
@@ -55,8 +56,6 @@ export default async function Page({
           </div>
         </main>
       </div>
-
-      <BackButton />
 
       <div className="absolute right-0 top-0 m-20 flex flex-row items-center justify-between gap-10"></div>
     </div>

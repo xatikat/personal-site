@@ -1,3 +1,4 @@
+"use client";
 import { albumsData } from "@/components/AlbumData";
 import AlbumRow from "@/components/ui/AlbumRow";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,17 +10,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/keyboard";
 
 export default function AlbumRowList() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const listAlbums = albumsData.map((album) => (
-    <AlbumRow
-      key={album.id}
-      id={album.id}
-      imageName={album.cover_file}
-      title={album.name}
-      artist={album.artist}
-      imageSize={150}
-    />
-  ));
   return albumsData ? (
     <Swiper
       className="absolute top-0 mx-auto h-screen w-screen select-none overflow-visible"
@@ -30,16 +20,17 @@ export default function AlbumRowList() {
       slidesPerView={5}
       coverflowEffect={{
         scale: 0.8,
-        depth: 600,
+        depth: 400,
         modifier: 0.4,
+        rotate: -30,
         slideShadows: false,
-        stretch: -500,
+        stretch: -400,
       }}
       keyboard={{ enabled: true }}
       loop={true}
       mousewheel={true}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      //onSlideChange={(swiper) => {}}
+      //onSwiper={(swiper) => {}}
     >
       {albumsData.map((album) => (
         <SwiperSlide className="px-[20vw]" key={album.id}>
@@ -49,6 +40,7 @@ export default function AlbumRowList() {
             imageName={album.cover_file}
             title={album.name}
             artist={album.artist}
+            year={album.year}
             imageSize={150}
           />
         </SwiperSlide>

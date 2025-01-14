@@ -9,7 +9,6 @@ import { isGridAtom } from "@/atoms/view";
 
 export default function AlbumList() {
   const [isGrid, setIsGrid] = useAtom(isGridAtom);
-  // default to true but using false for testing purposes
 
   function onGridToggle() {
     setIsGrid((prev) => !prev);
